@@ -1,0 +1,259 @@
+@import "var";
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: $dark;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+// .logo {
+//   font-family: serif;
+//   font-size: 32px;
+//   font-weight: 900;
+// }
+
+.container {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 33px 15px;
+}
+
+.nav {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  &__item:not(:first-child) {
+    margin-left: 4.4rem;
+  }
+
+  &__item:last-child {
+    margin-left: 2.7rem;
+  }
+
+  &__link {
+    color: $dark;
+  }
+
+  &__btn {
+    font-size: 1.4rem;
+    color: $white;
+    background-color: $purple;
+    padding: 1.6rem 2.6rem;
+    border-radius: 0.6rem; //maybe btn styles in comp?
+  }
+}
+
+.banner {
+  text-align: center;
+  background-color: $dark;
+  color: $white;
+  padding-top: 62px;
+  padding-bottom: 757px;
+  position: relative;
+
+  &__title {
+    font-size: 5.5rem;
+    max-width: 57rem;
+    margin: 0 auto 3.1rem;
+    padding-top: 62px;
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -172px;
+    margin: 0 auto;
+  }
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+
+  &__btn {
+    border: 1px solid $white;
+    background-color: transparent;
+    font-size: 1.6rem;
+    padding: 1.7rem 3.7rem;
+    color: $white;
+    border-radius: 0.6rem; //maybe btn styles in comp?
+    margin: 0 0.8rem;
+
+    &-main {
+      font-size: 1.5rem;
+      background-color: $purple;
+      border: 1px solid $purple;
+      padding: 1.8rem 3.7rem; //compensation font-size
+    }
+  }
+}
+
+.section {
+  padding-top: 150px;
+
+  &__title {
+    font-size: 4.8rem;
+    font-weight: 700;
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
+
+.tarif {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+
+  &-item {
+    flex: 0 0 32%;
+
+    &-01 {
+      .tarif-header {
+        background-image: url(../img/tarif-01.svg);
+      }
+
+      .tarif-footer {
+        background-color: rgba($color: $dark, $alpha: 0.03);
+      }
+
+      .tarif-list__item::before {
+        background-image: url(../img/check-01.svg);
+      }
+    }
+
+    &-02 {
+      .tarif-header {
+        background-image: url(../img/tarif-02.svg);
+      }
+
+      .tarif-footer {
+        background-color: rgba($color: #19c787, $alpha: 0.05);
+      }
+
+      .tarif-list__item::before {
+        background-image: url(../img/check-02.svg);
+      }
+    }
+
+    &-03 {
+      .tarif-header {
+        background-image: url(../img/tarif-03.svg);
+      }
+
+      .tarif-footer {
+        background-color: rgba($color: #fcb934, $alpha: 0.05);
+      }
+
+      .tarif-list__item::before {
+        background-image: url(../img/check-03.svg);
+      }
+    }
+  }
+
+  &-header {
+    padding-top: 10rem;
+    border-radius: 0.8rem 0.8rem 0 0;
+    // background-position: 0 center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &-info {
+    color: $white;
+    background-color: $dark;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 4rem 3rem 3.5rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4.5rem;
+      background-image: url(../img/item.svg);
+      position: absolute;
+      top: -4.5rem;
+      left: 0;
+    }
+
+    &__title {
+      font-size: 2.4rem;
+      font-weight: 400;
+      margin: 0;
+
+      &::before {
+        content: "";
+        display: block;
+        background-image: url(../img/logo-min.svg);
+        width: 6.1rem;
+        height: 1.6rem;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        margin-bottom: 1.3rem;
+      }
+    }
+
+    &__price {
+      font-size: 4.8rem;
+      margin: 0;
+
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &-footer {
+    border-radius: 0 0 0.8rem 0.8rem;
+    padding: 2.4rem 3rem;
+  }
+
+  &-list {
+    list-style: none;
+    padding-left: 0;
+
+    &__item {
+      position: relative; // background-repeat: no-repeat;      // background-size: cover;
+      padding-left: 3rem;
+      margin-bottom: 1.4rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: calc(50% - 1rem);
+        left: 0;
+      }
+    }
+  }
+}
